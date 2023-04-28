@@ -1,6 +1,6 @@
 <?php
 
-namespace Archilex\ToggleIconColumn\Columns;
+namespace Archilex\AvatarGroupColumn\Columns;
 
 use Filament\Tables\Columns\Column;
 
