@@ -38,13 +38,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Archilex\\AvatarGroup\\": "src",
-            "Archilex\\AvatarGroup\\Database\\Factories\\": "database/factories"
+            "Archilex\\AvatarGroupColumn\\": "src",
+            "Archilex\\AvatarGroupColumn\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Archilex\\AvatarGroup\\Tests\\": "tests"
+            "Archilex\\AvatarGroupColumn\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -66,7 +66,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Archilex\\AvatarGroup\\AvatarGroupColumnServiceProvider"
+                "Archilex\\AvatarGroupColumn\\AvatarGroupColumnServiceProvider"
             ],
             "aliases": {
                 "AvatarGroupColumn": "Archilex\\AvatarGroupColumn\\Facades\\AvatarGroupColumn"
