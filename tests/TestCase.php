@@ -1,12 +1,12 @@
 <?php
 
-namespace Archilex\AvatarGroup\Tests;
+namespace Archilex\AvatarGroupColumn\Tests;
 
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Archilex\AvatarGroup\AvatarGroupServiceProvider;
+use Archilex\AvatarGroupColumn\AvatarGroupColumnServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Archilex\\AvatarGroup\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Archilex\\AvatarGroupColumn\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
@@ -24,7 +24,7 @@ class TestCase extends Orchestra
         return [
             LivewireServiceProvider::class,
             FilamentServiceProvider::class,
-            AvatarGroupServiceProvider::class,
+            AvatarGroupColumnServiceProvider::class,
         ];
     }
 
@@ -33,7 +33,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_filament-avatar-group_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_filament-avatar-group-column_table.php.stub';
         $migration->up();
         */
     }

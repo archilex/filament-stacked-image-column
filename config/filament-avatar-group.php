@@ -1,6 +1,6 @@
 <?php
 
-// config for Archilex/AvatarGroup
+// config for Archilex/AvatarGroupColumn
 return [
 
 ];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Archilex\AvatarGroup\Database\Factories;
+namespace Archilex\AvatarGroupColumn\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

@@ -1,16 +1,16 @@
 {
-    "name": "archilex/filament-avatar-group",
+    "name": "archilex/filament-avatar-group-column",
     "description": "An avatar group column for Filament",
     "keywords": [
         "archilex",
         "laravel",
-        "filament-avatar-group",
+        "filament-avatar-group-column",
         "admin panel",
         "tables",
         "column",
         "avatars"
     ],
-    "homepage": "https://github.com/archilex/filament-avatar-group",
+    "homepage": "https://github.com/archilex/filament-avatar-group-column",
     "license": "MIT",
     "authors": [
         {
@@ -66,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Archilex\\AvatarGroup\\AvatarGroupServiceProvider"
+                "Archilex\\AvatarGroup\\AvatarGroupColumnServiceProvider"
             ],
             "aliases": {
-                "AvatarGroup": "Archilex\\AvatarGroup\\Facades\\AvatarGroup"
+                "AvatarGroupColumn": "Archilex\\AvatarGroupColumn\\Facades\\AvatarGroupColumn"
             }
         }
     },

@@ -1,5 +1,5 @@
 <?php
 
-use Archilex\AvatarGroup\Tests\TestCase;
+use Archilex\AvatarGroupColumn\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -1,9 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "dev:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-avatar-group.css --postcss --watch",
-        "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-avatar-group.css --postcss --minify && npm run purge",
-        "purge": "filament-purge -i resources/dist/filament-avatar-group.css -o resources/dist/filament-avatar-group.css",
+        "dev:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-avatar-group-column.css --postcss --watch",
+        "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-avatar-group-column.css --postcss --minify && npm run purge",
+        "purge": "filament-purge -i resources/dist/filament-avatar-group-column.css -o resources/dist/filament-avatar-group-column.css",
         "dev": "npm-run-all --parallel dev:*",
         "build": "npm-run-all build:*"
     },
