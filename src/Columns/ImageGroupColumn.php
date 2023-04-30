@@ -1,6 +1,6 @@
 <?php
 
-namespace Archilex\AvatarGroupColumn\Columns;
+namespace Archilex\ImageGroupColumn\Columns;
 
 use Closure;
 use Filament\Tables\Columns\Column;
@@ -12,11 +12,11 @@ use Illuminate\View\ComponentAttributeBag;
 use League\Flysystem\UnableToCheckFileExistence;
 use Throwable;
 
-class AvatarGroupColumn extends Column
+class ImageGroupColumn extends Column
 {
     use HasSize;
 
-    protected string $view = 'filament-avatar-group-column::columns.avatar-group-column';
+    protected string $view = 'filament-image-group-column::columns.image-group-column';
     
     protected string | Closure | null $disk = null;
     

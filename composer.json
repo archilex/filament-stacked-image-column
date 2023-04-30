@@ -1,16 +1,16 @@
 {
-    "name": "archilex/filament-avatar-group-column",
-    "description": "An avatar group column for Filament",
+    "name": "archilex/filament-image-group-column",
+    "description": "An image group column for Filament",
     "keywords": [
         "archilex",
         "laravel",
-        "filament-avatar-group-column",
+        "filament-image-group-column",
         "admin panel",
         "tables",
         "column",
-        "avatars"
+        "images"
     ],
-    "homepage": "https://github.com/archilex/filament-avatar-group-column",
+    "homepage": "https://github.com/archilex/filament-image-group-column",
     "license": "MIT",
     "authors": [
         {
@@ -38,13 +38,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Archilex\\AvatarGroupColumn\\": "src",
-            "Archilex\\AvatarGroupColumn\\Database\\Factories\\": "database/factories"
+            "Archilex\\ImageGroupColumn\\": "src",
+            "Archilex\\ImageGroupColumn\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Archilex\\AvatarGroupColumn\\Tests\\": "tests"
+            "Archilex\\ImageGroupColumn\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -66,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Archilex\\AvatarGroupColumn\\AvatarGroupColumnServiceProvider"
+                "Archilex\\ImageGroupColumn\\ImageGroupColumnServiceProvider"
             ],
             "aliases": {
-                "AvatarGroupColumn": "Archilex\\AvatarGroupColumn\\Facades\\AvatarGroupColumn"
+                "ImageGroupColumn": "Archilex\\ImageGroupColumn\\Facades\\ImageGroupColumn"
             }
         }
     },

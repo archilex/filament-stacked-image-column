@@ -1,16 +1,16 @@
 <?php
 
-namespace Archilex\AvatarGroupColumn;
+namespace Archilex\ImageGroupColumn;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class AvatarGroupColumnServiceProvider extends PluginServiceProvider
+class ImageGroupColumnServiceProvider extends PluginServiceProvider
 {
-    public static string $name = 'filament-avatar-group-column';
+    public static string $name = 'filament-image-group-column';
 
     protected array $styles = [
-        'plugin-filament-avatar-group-column' => __DIR__.'/../resources/dist/filament-avatar-group-column.css',
+        'plugin-filament-image-group-column' => __DIR__.'/../resources/dist/filament-image-group-column.css',
     ];
 
     public function configurePackage(Package $package): void

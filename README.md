@@ -1,9 +1,9 @@
-# This is my package filament-avatar-group-column
+# This is my package filament-image-group-column
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/archilex/filament-avatar-group-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-avatar-group-column)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/archilex/filament-avatar-group-column/run-tests?label=tests)](https://github.com/archilex/filament-avatar-group-column/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/archilex/filament-avatar-group-column/Check%20&%20fix%20styling?label=code%20style)](https://github.com/archilex/filament-avatar-group-column/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/archilex/filament-avatar-group-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-avatar-group-column)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/archilex/filament-image-group-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-image-group-column)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/archilex/filament-image-group-column/run-tests?label=tests)](https://github.com/archilex/filament-image-group-column/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/archilex/filament-image-group-column/Check%20&%20fix%20styling?label=code%20style)](https://github.com/archilex/filament-image-group-column/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/archilex/filament-image-group-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-image-group-column)
 
 
 
@@ -14,26 +14,26 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require archilex/filament-avatar-group-column
+composer require archilex/filament-image-group-column
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="filament-avatar-group-column-migrations"
+php artisan vendor:publish --tag="filament-image-group-column-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="filament-avatar-group-column-config"
+php artisan vendor:publish --tag="filament-image-group-column-config"
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="filament-avatar-group-column-views"
+php artisan vendor:publish --tag="filament-image-group-column-views"
 ```
 
 This is the contents of the published config file:
@@ -46,8 +46,8 @@ return [
 ## Usage
 
 ```php
-$filament-avatar-group-column = new Archilex\AvatarGroupColumn();
-echo $filament-avatar-group-column->echoPhrase('Hello, Archilex!');
+$filament-image-group-column = new Archilex\ImageGroupColumn();
+echo $filament-image-group-column->echoPhrase('Hello, Archilex!');
 ```
 
 ## Testing

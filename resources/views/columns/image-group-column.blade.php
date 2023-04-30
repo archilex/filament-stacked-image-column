@@ -27,7 +27,7 @@
 @endphp
 
 <div {{ $attributes->merge($getExtraAttributes())->class([
-    'filament-tables-avatar-group-column',
+    'filament-tables-image-group-column',
     'px-4 py-3' => ! $isInline(),
 ]) }}>
     <div 
