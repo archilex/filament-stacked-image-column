@@ -100,7 +100,7 @@ class ImageGroupColumn extends Column
         }
 
         if ($this->isCurator()) {
-            return $this->getCuratorPath();
+            return $this->getCuratorPath($image);
         }
 
         if (filter_var($image, FILTER_VALIDATE_URL) !== false) {

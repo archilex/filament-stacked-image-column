@@ -18,14 +18,14 @@ trait HasCurator
         return $this->evaluate($this->isCurator);
     }
 
-    public function getCuratorPath(): string
+    protected function getCuratorPath(array $image): string
     {
         $urlBuilder = \League\Glide\Urls\UrlBuilderFactory::create('/curator/', config('app.key'));
             
         return $urlBuilder->getUrl($image['path'], ['w' => $this->getCuratorSizes(), 'h' => $this->getCuratorSizes(), 'fit' => 'crop', 'fm' => 'webp']);
     }
 
-    protected function getCuratorSizes()
+    protected function getCuratorSizes(): string
     {
         return match ($this->size) {
             'xs' => '32',
