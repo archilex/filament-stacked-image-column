@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace Archilex\ImageGroupColumn\Columns\Concerns;
 
@@ -11,7 +11,7 @@ trait HasRemaining
     protected bool | Closure $shouldShowRemainingAsText = false;
 
     protected string | Closure | null $remainingTextSize = null;
-    
+
     public function showRemaining(bool | Closure $condition = true, bool | Closure $showRemainingAsText = false, string | Closure | null $remainingTextSize = null): static
     {
         $this->shouldShowRemaining = $condition;

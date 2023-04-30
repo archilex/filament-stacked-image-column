@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace Archilex\ImageGroupColumn\Columns\Concerns;
 
