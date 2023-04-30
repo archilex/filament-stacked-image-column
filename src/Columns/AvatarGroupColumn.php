@@ -30,6 +30,8 @@ class AvatarGroupColumn extends Column
 
     protected string | Closure | null $overlap = null;
 
+    protected bool $isCurator = false;
+
     protected bool | Closure $shouldShowRemaining = false;
 
     protected bool | Closure $shouldShowRemainingAsText = false;
@@ -75,6 +77,11 @@ class AvatarGroupColumn extends Column
             return null;
         }
 
+        if ($this->isCurator()) {
+            $urlBuilder = \League\Glide\Urls\UrlBuilderFactory\UrlBuilderFactory::create('/curator/', config('app.key'));
+            return $urlBuilder->getUrl($image['path'], ['w' => $this->getCuratorSizes(), 'h' => $this->getCuratorSizes(), 'fit' => 'crop', 'fm' => 'webp']);
+        }
+
         if (filter_var($image, FILTER_VALIDATE_URL) !== false) {
             return $image;
         }
@@ -92,7 +99,7 @@ class AvatarGroupColumn extends Column
 
         if ($this->getVisibility() === 'private') {
             try {
-                return $temporaryImage = $storage->temporaryUrl(
+                return $storage->temporaryUrl(
                     $image,
                     now()->addMinutes(5),
                 );
@@ -161,7 +168,7 @@ class AvatarGroupColumn extends Column
     }
 
     public function getImages(): array
-    {
+    {        
         $images = $this->getState();
 
         if (is_array($images)) {
@@ -205,6 +212,18 @@ class AvatarGroupColumn extends Column
         return $this->evaluate($this->limit);
     }
 
+    public function curator(bool $condition = true): static
+    {
+        $this->isCurator = $condition;
+        
+        return $this;
+    }
+
+    public function isCurator(): bool
+    {
+        return $this->evaluate($this->isCurator);
+    }
+
     public function showRemaining(bool | Closure $condition = true, bool | Closure $showRemainingAsText = false, string | Closure | null $remainingTextSize = null): static
     {
         $this->shouldShowRemaining = $condition;
@@ -241,5 +260,19 @@ class AvatarGroupColumn extends Column
     public function getRemainingTextSize(): ?string
     {
         return $this->evaluate($this->remainingTextSize);
+    }
+
+    protected function getCuratorSizes()
+    {
+        return match ($this->size) {
+            'xs' => '32',
+            'sm' => '40',
+            'md' => '48',
+            'lg' => '56',
+            'xl' => '64',
+            '2xl' => '80',
+            '3xl' => '96',
+            default => '56',
+        };
     }
 }
