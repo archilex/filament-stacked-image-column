@@ -101,6 +101,7 @@ The default overlap is `-space-x-1` but you may customize the overlap to be eith
 StackedImageColumn::make('users.avatar')
     ->circular()
     ->overlap(3)
+```
 
 ## Testing
 
@@ -124,6 +125,14 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 - [Kenneth Sese](https://github.com/archilex)
 - [All Contributors](../../contributors)
+
+## Other Filament Plugins
+
+Check out my other Filament Plugins:
+
+- [Filter Sets](https://filamentphp.com/plugins/filter-sets): Save your filters, search query, column order, and column search queries into easily accessible filter sets
+- [Toggle Icon Column](https://filamentphp.com/plugins/toggle-icon-column): Display a toggleable icon in your Filament table.
+
 
 ## License
 
