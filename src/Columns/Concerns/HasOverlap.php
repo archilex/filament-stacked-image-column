@@ -6,16 +6,16 @@ use Closure;
 
 trait HasOverlap
 {
-    protected string | Closure | null $overlap = null;
+    protected int | Closure | null $overlap = null;
 
-    public function overlap(string | Closure | null $overlap): static
+    public function overlap(int | Closure | null $overlap): static
     {
         $this->overlap = $overlap;
 
         return $this;
     }
 
-    public function getOverlap(): ?string
+    public function getOverlap(): ?int
     {
         return $this->evaluate($this->overlap);
     }

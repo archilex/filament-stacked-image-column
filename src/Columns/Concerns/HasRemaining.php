@@ -8,34 +8,34 @@ trait HasRemaining
 {
     protected bool | Closure $shouldShowRemaining = false;
 
-    protected bool | Closure $shouldShowRemainingAsText = false;
+    protected bool | Closure $shouldShowRemainingAfterStack = false;
 
     protected string | Closure | null $remainingTextSize = null;
 
-    public function showRemaining(bool | Closure $condition = true, bool | Closure $showRemainingAsText = false, string | Closure | null $remainingTextSize = null): static
+    public function showRemaining(bool | Closure $condition = true, bool | Closure $showRemainingAfterStack = false, string | Closure | null $remainingTextSize = null): static
     {
         $this->shouldShowRemaining = $condition;
-        $this->showRemainingAsText($showRemainingAsText);
+        $this->showRemainingAfterStack($showRemainingAfterStack);
         $this->remainingTextSize($remainingTextSize);
 
         return $this;
     }
 
-    public function showRemainingAsText(bool | Closure $condition = true): static
+    public function showRemainingAfterStack(bool | Closure $condition = true): static
     {
-        $this->shouldShowRemainingAsText = $condition;
+        $this->shouldShowRemainingAfterStack = $condition;
 
         return $this;
     }
 
     public function shouldShowRemaining(): bool
     {
-        return $this->evaluate($this->shouldShowRemaining);
+        return (bool) $this->evaluate($this->shouldShowRemaining);
     }
 
-    public function shouldShowRemainingAsText(): bool
+    public function shouldShowRemainingAfterStack(): bool
     {
-        return $this->evaluate($this->shouldShowRemainingAsText);
+        return (bool) $this->evaluate($this->shouldShowRemainingAfterStack);
     }
 
     public function remainingTextSize(string | Closure | null $remainingTextSize): static

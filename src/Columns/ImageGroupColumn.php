@@ -18,8 +18,6 @@ use Throwable;
 
 class ImageGroupColumn extends Column
 {
-    use HasSize;
-    use HasCurator;
     use HasOverlap;
     use HasRemaining;
     use HasRing;
@@ -81,6 +79,14 @@ class ImageGroupColumn extends Column
         return $images;
     }
 
+    public function getImagesWithPath(): array
+    {
+        return collect($this->getImages())
+            ->filter(fn ($image) => $this->getPath($image) !== null)
+            ->take($this->getLimit())
+            ->toArray();
+    }
+
     public function separator(string | Closure | null $separator = ','): static
     {
         $this->separator = $separator;
@@ -93,18 +99,16 @@ class ImageGroupColumn extends Column
         return $this->evaluate($this->separator);
     }
     
-    public function getImagePath($image): ?string
+    public function getPath(string | null $image = null): ?string
     {
-        if (! $image) {
+        $state = $image ?? $this->getState();
+
+        if (! $state) {
             return null;
         }
 
-        if ($this->isCurator()) {
-            return $this->getCuratorPath($image);
-        }
-
         if (filter_var($image, FILTER_VALIDATE_URL) !== false) {
-            return $image;
+            return $state;
         }
 
         /** @var FilesystemAdapter $storage */
@@ -121,7 +125,7 @@ class ImageGroupColumn extends Column
         if ($this->getVisibility() === 'private') {
             try {
                 return $storage->temporaryUrl(
-                    $image,
+                    $state,
                     now()->addMinutes(5),
                 );
             } catch (Throwable $exception) {
@@ -129,7 +133,7 @@ class ImageGroupColumn extends Column
             }
         }
 
-        return $storage->url($image);
+        return $storage->url($state);
     }
 
     public function visibility(string | Closure $visibility): static
