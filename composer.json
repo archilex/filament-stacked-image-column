@@ -1,6 +1,6 @@
 {
     "name": "archilex/filament-stacked-image-column",
-    "description": "An stacked image column for Filament",
+    "description": "Display multiple images as a stack in your Filament tables",
     "keywords": [
         "archilex",
         "laravel",
