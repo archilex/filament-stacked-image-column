@@ -22,13 +22,13 @@ class StackedImageColumn extends ImageColumn
 
     protected string $view = 'filament-stacked-image-column::columns.stacked-image-column';
 
-    protected string|Closure|null $disk = null;
+    protected string | Closure | null $disk = null;
 
-    protected string|Closure $visibility = 'public';
+    protected string | Closure $visibility = 'public';
 
-    protected string|Closure|null $separator = null;
+    protected string | Closure | null $separator = null;
 
-    protected int|Closure|null $limit = null;
+    protected int | Closure | null $limit = null;
 
     protected array $extraImgAttributes = [];
 
@@ -39,7 +39,7 @@ class StackedImageColumn extends ImageColumn
         $this->disk(config('tables.default_filesystem_disk'));
     }
 
-    public function disk(string|Closure|null $disk): static
+    public function disk(string | Closure | null $disk): static
     {
         $this->disk = $disk;
 
@@ -85,7 +85,7 @@ class StackedImageColumn extends ImageColumn
             ->toArray();
     }
 
-    public function separator(string|Closure|null $separator = ','): static
+    public function separator(string | Closure | null $separator = ','): static
     {
         $this->separator = $separator;
 
@@ -97,7 +97,7 @@ class StackedImageColumn extends ImageColumn
         return $this->evaluate($this->separator);
     }
 
-    public function getPath(string|null $image = null): ?string
+    public function getPath(string | null $image = null): ?string
     {
         $state = $image ?? $this->getState();
 
@@ -134,7 +134,7 @@ class StackedImageColumn extends ImageColumn
         return $storage->url($state);
     }
 
-    public function visibility(string|Closure $visibility): static
+    public function visibility(string | Closure $visibility): static
     {
         $this->visibility = $visibility;
 
@@ -146,7 +146,7 @@ class StackedImageColumn extends ImageColumn
         return $this->evaluate($this->visibility);
     }
 
-    public function extraImgAttributes(array|Closure $attributes, bool $merge = false): static
+    public function extraImgAttributes(array | Closure $attributes, bool $merge = false): static
     {
         if ($merge) {
             $this->extraImgAttributes[] = $attributes;
@@ -173,7 +173,7 @@ class StackedImageColumn extends ImageColumn
         return new ComponentAttributeBag($this->getExtraImgAttributes());
     }
 
-    public function limit(int|Closure|null $limit = 3): static
+    public function limit(int | Closure | null $limit = 3): static
     {
         $this->limit = $limit;
 

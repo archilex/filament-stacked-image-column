@@ -6,9 +6,9 @@ use Closure;
 
 trait HasRing
 {
-    protected int|Closure|null $ring = null;
+    protected int | Closure | null $ring = null;
 
-    public function ring(string|Closure|null $ring): static
+    public function ring(string | Closure | null $ring): static
     {
         $this->ring = $ring;
 
