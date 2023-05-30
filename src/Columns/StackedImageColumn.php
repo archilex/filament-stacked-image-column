@@ -1,10 +1,10 @@
 <?php
 
-namespace Archilex\ImageGroupColumn\Columns;
+namespace Archilex\StackedImageColumn\Columns;
 
-use Archilex\ImageGroupColumn\Columns\Concerns\HasOverlap;
-use Archilex\ImageGroupColumn\Columns\Concerns\HasRemaining;
-use Archilex\ImageGroupColumn\Columns\Concerns\HasRing;
+use Archilex\StackedImageColumn\Columns\Concerns\HasOverlap;
+use Archilex\StackedImageColumn\Columns\Concerns\HasRemaining;
+use Archilex\StackedImageColumn\Columns\Concerns\HasRing;
 use Closure;
 use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Contracts\Filesystem\Filesystem;
@@ -14,13 +14,13 @@ use Illuminate\View\ComponentAttributeBag;
 use League\Flysystem\UnableToCheckFileExistence;
 use Throwable;
 
-class ImageGroupColumn extends ImageColumn
+class StackedImageColumn extends ImageColumn
 {
     use HasOverlap;
     use HasRemaining;
     use HasRing;
 
-    protected string $view = 'filament-image-group-column::columns.image-group-column';
+    protected string $view = 'filament-stacked-image-column::columns.stacked-image-column';
     
     protected string | Closure | null $disk = null;
     

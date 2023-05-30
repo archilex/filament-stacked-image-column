@@ -1,9 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "dev:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-image-group-column.css --postcss --watch",
-        "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-image-group-column.css --postcss --minify && npm run purge",
-        "purge": "filament-purge -i resources/dist/filament-image-group-column.css -o resources/dist/filament-image-group-column.css",
+        "dev:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-stacked-image-column.css --postcss --watch",
+        "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-stacked-image-column.css --postcss --minify && npm run purge",
+        "purge": "filament-purge -i resources/dist/filament-stacked-image-column.css -o resources/dist/filament-stacked-image-column.css",
         "dev": "npm-run-all --parallel dev:*",
         "build": "npm-run-all build:*"
     },

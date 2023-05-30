@@ -1,6 +1,6 @@
 <?php
 
-namespace Archilex\ImageGroupColumn\Database\Factories;
+namespace Archilex\StackedImageColumn\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

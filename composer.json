@@ -1,16 +1,16 @@
 {
-    "name": "archilex/filament-image-group-column",
-    "description": "An image group column for Filament",
+    "name": "archilex/filament-stacked-image-column",
+    "description": "An stacked image column for Filament",
     "keywords": [
         "archilex",
         "laravel",
-        "filament-image-group-column",
+        "filament-stacked-image-column",
         "admin panel",
         "tables",
         "column",
         "images"
     ],
-    "homepage": "https://github.com/archilex/filament-image-group-column",
+    "homepage": "https://github.com/archilex/filament-stacked-image-column",
     "license": "MIT",
     "authors": [
         {
@@ -38,13 +38,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Archilex\\ImageGroupColumn\\": "src",
-            "Archilex\\ImageGroupColumn\\Database\\Factories\\": "database/factories"
+            "Archilex\\StackedImageColumn\\": "src",
+            "Archilex\\StackedImageColumn\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Archilex\\ImageGroupColumn\\Tests\\": "tests"
+            "Archilex\\StackedImageColumn\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -66,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Archilex\\ImageGroupColumn\\ImageGroupColumnServiceProvider"
+                "Archilex\\StackedImageColumn\\StackedImageColumnServiceProvider"
             ],
             "aliases": {
-                "ImageGroupColumn": "Archilex\\ImageGroupColumn\\Facades\\ImageGroupColumn"
+                "StackedImageColumn": "Archilex\\StackedImageColumn\\Facades\\StackedImageColumn"
             }
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Archilex\ImageGroupColumn\Columns\Concerns;
+namespace Archilex\StackedImageColumn\Columns\Concerns;
 
 use Closure;
 

@@ -26,7 +26,7 @@
 @endphp
 
 <div {{ $attributes->merge($getExtraAttributes())->class([
-    'filament-tables-image-group-column',
+    'filament-tables-stacked-image-column',
     'px-4 py-3' => ! $isInline(),
 ]) }}>
     <div class="flex items-center space-x-2">

@@ -1,12 +1,12 @@
 <?php
 
-namespace Archilex\ImageGroupColumn\Tests;
+namespace Archilex\StackedImageColumn\Tests;
 
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Archilex\ImageGroupColumn\ImageGroupColumnServiceProvider;
+use Archilex\StackedImageColumn\StackedImageColumnServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Archilex\\ImageGroupColumn\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Archilex\\StackedImageColumn\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
@@ -24,7 +24,7 @@ class TestCase extends Orchestra
         return [
             LivewireServiceProvider::class,
             FilamentServiceProvider::class,
-            ImageGroupColumnServiceProvider::class,
+            StackedImageColumnServiceProvider::class,
         ];
     }
 
@@ -33,7 +33,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_filament-image-group-column_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_filament-stacked-image-column_table.php.stub';
         $migration->up();
         */
     }
