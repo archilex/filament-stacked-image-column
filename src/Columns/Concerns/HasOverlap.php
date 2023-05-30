@@ -6,9 +6,9 @@ use Closure;
 
 trait HasOverlap
 {
-    protected int | Closure | null $overlap = null;
+    protected int|Closure|null $overlap = null;
 
-    public function overlap(int | Closure | null $overlap): static
+    public function overlap(int|Closure|null $overlap): static
     {
         $this->overlap = $overlap;
 
