@@ -4,7 +4,7 @@
 [![run-tests](https://github.com/archilex/filament-stacked-image-column/actions/workflows/run-tests.yml/badge.svg)](https://github.com/archilex/filament-stacked-image-column/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/archilex/filament-stacked-image-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-stacked-image-column)
 
-Stacked Image Columns allows you to display multiple images as a stack in your Filament tables. 
+Stacked Image Column allows you to display multiple images as a stack in your Filament tables. 
 
 Note: This functionality will be part of core in Filament v3 (follow my [PR](https://github.com/filamentphp/filament/pull/6376)). However, since there is currently no ETA on v3, I decided to go ahead and release this now as a plugin.
 
