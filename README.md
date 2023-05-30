@@ -6,7 +6,7 @@
 
 Stacked Image Columns allows you to display multiple images as a stack in your Filament tables. 
 
-This functionality will be part of core in Filament v3 (follow my [PR](https://github.com/filamentphp/filament/pull/6376)), however since there is currently no ETA on v3, I wanted to go ahead and release this now as a plugin.
+Note: This functionality will be part of core in Filament v3 (follow my [PR](https://github.com/filamentphp/filament/pull/6376)). However, since there is currently no ETA on v3, I decided to go ahead and release this now as a plugin.
 
 ## Screenshots
 
