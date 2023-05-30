@@ -10,9 +10,9 @@ Note: This functionality will be part of core in Filament v3 (follow my [PR](htt
 
 ## Screenshots
 
-![stacked](https://github.com/archilex/filament-stacked-image-column/assets/6097099/df6c51c4-707c-48bb-b120-a7aeb0abe754)
+![stacked](https://user-images.githubusercontent.com/6097099/241840492-876214e1-0241-4919-ba4d-95ca0dc118ea.png)
 
-![stacked-dark](https://github.com/archilex/filament-stacked-image-column/assets/6097099/2e121e61-c20d-4972-a649-6c72cfd586b4)
+![stacked-dark](https://user-images.githubusercontent.com/6097099/241840487-18196356-a25a-444d-9b32-76cd09618a11.png)
 
 ## Installation
 
