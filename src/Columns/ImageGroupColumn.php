@@ -2,13 +2,11 @@
 
 namespace Archilex\ImageGroupColumn\Columns;
 
-use Archilex\ImageGroupColumn\Columns\Concerns\HasCurator;
 use Archilex\ImageGroupColumn\Columns\Concerns\HasOverlap;
 use Archilex\ImageGroupColumn\Columns\Concerns\HasRemaining;
 use Archilex\ImageGroupColumn\Columns\Concerns\HasRing;
 use Closure;
-use Filament\Tables\Columns\Column;
-use Filament\Tables\Columns\Concerns\HasSize;
+use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +14,7 @@ use Illuminate\View\ComponentAttributeBag;
 use League\Flysystem\UnableToCheckFileExistence;
 use Throwable;
 
-class ImageGroupColumn extends Column
+class ImageGroupColumn extends ImageColumn
 {
     use HasOverlap;
     use HasRemaining;
