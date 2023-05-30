@@ -1,13 +1,18 @@
-# This is my package filament-stacked-image-column
+# Stacked Image Column for Filament
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/archilex/filament-stacked-image-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-stacked-image-column)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/archilex/filament-stacked-image-column/run-tests?label=tests)](https://github.com/archilex/filament-stacked-image-column/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/archilex/filament-stacked-image-column/Check%20&%20fix%20styling?label=code%20style)](https://github.com/archilex/filament-stacked-image-column/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![run-tests](https://github.com/archilex/filament-stacked-image-column/actions/workflows/run-tests.yml/badge.svg)](https://github.com/archilex/filament-stacked-image-column/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/archilex/filament-stacked-image-column.svg?style=flat-square)](https://packagist.org/packages/archilex/filament-stacked-image-column)
 
+Stacked Image Columns allows you to display multiple images as a stack in your Filament tables. 
 
+This functionality will be part of core in Filament v3 (follow my [PR](https://github.com/filamentphp/filament/pull/6376)), however since there is currently no ETA on v3, I wanted to go ahead and release this now as a plugin.
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+## Screenshots
+
+![stacked](https://github.com/archilex/filament-stacked-image-column/assets/6097099/b1306cff-66ea-4bf2-823c-034c1dfddf98)
+
+![stacked-dark](https://github.com/archilex/filament-stacked-image-column/assets/6097099/bb6f4c4d-b7f0-48b0-825a-11b4062e5461)
 
 ## Installation
 
@@ -17,38 +22,85 @@ You can install the package via composer:
 composer require archilex/filament-stacked-image-column
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-stacked-image-column-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-stacked-image-column-config"
-```
-
 Optionally, you can publish the views using
 
 ```bash
 php artisan vendor:publish --tag="filament-stacked-image-column-views"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+Normally you will use Stacked Image Column to show a relationship of images. The name of the relationship comes first, followed by a period, followed by the name of the column to display:
+
 ```php
-$filament-stacked-image-column = new Archilex\StackedImageColumn();
-echo $filament-stacked-image-column->echoPhrase('Hello, Archilex!');
+use Archilex\StackedImageColumn\Columns\StackedImageColumn;
+
+return $table
+    ->columns([
+        StackedImageColumn::make('orderItems.image'),
+    ]);
 ```
+
+### Using a separator
+
+Instead of using a relationship, you may use a separated string by passing the separator into `separator()`:
+
+```php
+StackedImageColumn::make('product_images')
+    ->separator(',')
+```
+
+### Customizing the images
+
+As `StackedImageColumn` extends Filament's `ImageColumn`, you have access to most of the same methods:
+
+```php
+StackedImageColumn::make('images')
+    ->circular()
+    ->width(20)
+```
+
+### Setting a limit
+
+You may set a limit to the number of images you want to display by passing `limit()`:
+
+```php
+StackedImageColumn::make('orderItems.image')
+    ->circular()
+    ->limit(3)
+```
+
+### Showing the remaining images count
+
+When you set a limit you may also display the count of remaining images by passing `showRemaining()`. 
+
+```php
+StackedImageColumn::make('orderItems.image')
+    ->circular()
+    ->limit(3)
+    ->showRemaining()
+```
+
+By default, `showRemaining()` will display the count of remaining images as a number stacked on the other images. If you prefer to show the count as a number after the images you may use `showRemainingAfterStack()`. You may also set the text size by using `remainingTextSize('xs')`;
+
+### Customizing the ring width
+
+The default ring width is `ring-3` but you may customize the ring width to be either `0`, `1`, `2`, or `4` which correspond to tailwinds `ring-widths`: `ring-0`, `ring-1`, `ring-2`, and `ring-4` respectively.
+
+```php
+StackedImageColumn::make('users.avatar')
+    ->circular()
+    ->ring(3)
+```
+
+### Customizing the overlap
+
+The default overlap is `-space-x-1` but you may customize the overlap to be either `0`, `1`, `2`, `3`, or `4` which correspond to tailwinds `space-x` options: `space-x-0`, `-space-x-1`, `-space-x-2`, `-space-x-3`, and `-space-x-4` respectively.
+
+```php
+StackedImageColumn::make('users.avatar')
+    ->circular()
+    ->overlap(3)
 
 ## Testing
 
