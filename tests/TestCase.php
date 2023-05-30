@@ -2,11 +2,11 @@
 
 namespace Archilex\StackedImageColumn\Tests;
 
+use Archilex\StackedImageColumn\StackedImageColumnServiceProvider;
 use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Archilex\StackedImageColumn\StackedImageColumnServiceProvider;
 
 class TestCase extends Orchestra
 {
