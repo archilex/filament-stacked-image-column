@@ -2,8 +2,6 @@
 
 Stacked Image Column allows you to display multiple images as a stack in your Filament tables. 
 
-Note: This functionality will be part of core in Filament v3 (follow my [PR](https://github.com/filamentphp/filament/pull/6376)). However, since there is currently no ETA on v3, I decided to go ahead and release this now as a plugin.
-
 ## Screenshots
 
 ![stacked](https://user-images.githubusercontent.com/6097099/241840492-876214e1-0241-4919-ba4d-95ca0dc118ea.png)
@@ -126,8 +124,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 Check out my other Filament Plugins:
 
-- [Filter Sets](/plugins/kennet-sese-filter-sets): Save your filters, search query, column order, and column search queries into easily accessible filter sets
-- [Toggle Icon Column](/plugins/kenneth-sese-toggle-icon-column): Display a toggleable icon in your Filament table.
+- [Filter Sets](https://filamentphp.com/plugins/filter-sets): Save your filters, search query, column order, and column search queries into easily accessible filter sets
+- [Toggle Icon Column](https://filamentphp.com/plugins/toggle-icon-column): Display a toggleable icon in your Filament table.
 
 
 ## License
