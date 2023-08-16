@@ -6,6 +6,13 @@
     $overlap = $getOverlap() ?? 1;
     $imageCount = 0;
 
+    $defaultImageUrl = $getDefaultImageUrl();
+
+    if ((! count($images)) && filled($defaultImageUrl)) {
+        $imagesWithPath = [null];
+    }
+
+
     $ring = match ($getRing()) {
         0 => 'ring-0',
         1 => 'ring-1',
@@ -43,13 +50,13 @@
                 },
             ])
         >
-            @foreach ($imagesWithPath as $path)
+            @foreach ($imagesWithPath as $image)
                 @php
                     $imageCount ++;
                 @endphp
                 
                 <img
-                    src="{{ $path }}"
+                    src="{{ filled($image) ? $getPath($image) : $defaultImageUrl }}"
                     style="
                         {!! $height !== null ? "height: {$height};" : null !!}
                         {!! $width !== null ? "width: {$width};" : null !!}
