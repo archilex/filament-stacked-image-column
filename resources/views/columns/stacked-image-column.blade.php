@@ -43,9 +43,10 @@
                 },
             ])
         >
-            @foreach ($imagesWithPath as $path)
+            @foreach ($imagesWithPath as $image)
                 @php
                     $imageCount ++;
+                    $path = $getPath($image);
                 @endphp
                 
                 <img

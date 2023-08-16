@@ -97,7 +97,7 @@ class StackedImageColumn extends ImageColumn
         return $this->evaluate($this->separator);
     }
 
-    public function getPath(string | null $image = null): ?string
+    public function getPath(string $image = null): ?string
     {
         $state = $image ?? $this->getState();
 

@@ -12,7 +12,7 @@ trait HasRemaining
 
     protected string | Closure | null $remainingTextSize = null;
 
-    public function showRemaining(bool | Closure $condition = true, bool | Closure $showRemainingAfterStack = false, string | Closure | null $remainingTextSize = null): static
+    public function showRemaining(bool | Closure $condition = true, bool | Closure $showRemainingAfterStack = false, string | Closure $remainingTextSize = null): static
     {
         $this->shouldShowRemaining = $condition;
         $this->showRemainingAfterStack($showRemainingAfterStack);
