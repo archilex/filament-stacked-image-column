@@ -4,8 +4,9 @@ namespace Archilex\StackedImageColumn;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class StackedImageColumnServiceProvider extends PluginServiceProvider
+class StackedImageColumnServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-stacked-image-column';
 
